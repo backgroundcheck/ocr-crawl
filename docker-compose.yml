@@ -1,0 +1,10 @@
+
+ocr:
+    build: .
+    command: python crawl.py
+    volumes:
+      - "/srv/data/:/srv/data/"
+    environment:
+      DATA_PATH: /srv/data/source/yanukovychleaks/
+      EXTRACTORS_CACHE_DIR: /srv/data/live/extractors/aleph
+      TESSDATA_PREFIX: /usr/share/tesseract-ocr
